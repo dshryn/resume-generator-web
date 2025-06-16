@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume & Cover Letter Generator</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Resume & Cover Letter Generator</h1>
+        <form id="genForm">
+            <div class="card">
+                <label>Name</label>
+                <input type="text" id="name" required />
+                <label>Contact Info</label>
+                <input type="text" id="contact" required />
+                <label>Education</label>
+                <textarea id="education" rows="2" required></textarea>
+                <label>Skills (comma-separated)</label>
+                <textarea id="skills" rows="2" required></textarea>
+                <label>Experience</label>
+                <textarea id="experience" rows="3" required></textarea>
+            </div>
+
+            <div class="card">
+                <label>Job Description</label>
+                <textarea id="jobDesc" rows="6" required></textarea>
+            </div>
+
+            <div class="card options">
+                <div>
+                    <label><input type="radio" name="mode" value="resume" checked /> Resume</label>
+                    <label><input type="radio" name="mode" value="cover-letter" /> Cover Letter</label>
+                </div>
+                <div>
+                    <label><input type="radio" name="output" value="text" /> Text</label>
+                    <label><input type="radio" name="output" value="pdf" checked /> PDF</label>
+                </div>
+            </div>
+
+            <button type="submit">Generate</button>
+        </form>
+
+        <div id="result" class="card"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
